@@ -62,7 +62,7 @@ def signup_for_activity(activity_name: str, email: str):
     # Get the specific activity
     activity = activities[activity_name]
 
-    # Check if student is already signed up
+    # Check if student is already signed up -- Validate
     if email in activity["participants"]:
         raise HTTPException(
             status_code=400,
